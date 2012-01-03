@@ -1,0 +1,335 @@
+	public pointcut addNewMediaToAlbum() : call( public void IFilesystem.addNewMediaToAlbum(String,String,String,byte[]))
+	public pointcut takePicture() : execution( public byte[] br.unicamp.ic.sed.mobilemedia.captureMedia.impl.CaptureScreen.takePicture());
+	public abstract pointcut addCommandPhoto( Displayable screen );
+	public abstract pointcut addCommandVideo( Displayable screen );
+	public abstract pointcut postCommand( Command command );
+	private pointcut handleCommand( Command command ) : execution(public boolean CaptureController.handleCommand( Command ))
+	pointcut initMenu( GameCanvas  screen ) : call( private void CaptureScreen.initMenu( ) )
+	private pointcut handleCommand( Command command ) : execution(public boolean CaptureController.handleCommand( Command ))
+	pointcut getMusicName() : XPIPhotoController.getMediaName();
+	pointcut getAlbumName() : XPIPhotoController.getAlbumName();
+	pointcut postCommand( Command c ) : XPIPhoto.postCommand( c ); 
+	pointcut addCommand( String command , int type , int posi ) : 
+	public pointcut initMenu(br.unicamp.ic.sed.mobilemedia.photo.impl.PhotoListScreen photoListScreen):
+	public pointcut postCommand( Command c ) : 
+	public pointcut addCommandPhoto( Displayable display ) :
+	public pointcut addCommandVideo( Displayable display ) :
+	public pointcut handleCommand( Command c , String recordName , String musicName ):
+	public pointcut addCommand( String command , int type , int posi ):
+	public pointcut handleCommand( Command c , String recordName , String musicName ):
+	public pointcut addCommand( String command , int type , int posi ):
+	public pointcut handleException():
+	public abstract pointcut handleException(  );
+	public pointcut postCommand(Command c):
+	public pointcut addCopyCommand(Displayable photoViewScreen):
+	public pointcut showImage(String name):
+	public pointcut postCommand(Command c):XPIMusicPlayController.handleCommand(c);
+	public pointcut setButtons(Form photoViewScreen):
+	public pointcut playMusic(String albumName , String musicName):
+	public pointcut postCommand( Command command ) :
+	public abstract pointcut handleCommand( Command c , String recordName , String videoName );
+	public abstract pointcut addCommand( String command , int type , int posi );
+	public pointcut playVideo( String albumName , String videoName ) : 
+	public pointcut getMedia( ) : call( public IImageData IFilesystemVideo.getMediaInfo(String))
+	public pointcut getVideo( ) : call( public InputStream IFilesystemVideo.getVideoFromRecordStore( String , String ))
+	public pointcut setButtons( GameCanvas screen ) :
+	public pointcut createVideoScreen() :
+	public pointcut constructBaseController( MIDlet midlet ) : 
+	public pointcut getBytesFromImageInfo(IImageData ii):
+	public pointcut createImageData(int foreignRecordId, String parentAlbumName,String imageLabel , byte[] bytes , int endIndex  ):
+	public pointcut updateCounter(String albumName, String imageName):
+	public pointcut getBytesFromImageInfo(IImageData ii):
+	public pointcut createImageData(int foreignRecordId, String parentAlbumName,String imageLabel , byte[] bytes , int endIndex  ):
+	public pointcut updateCounter(String albumName, String imageName):
+	public pointcut getBytesFromImageInfo(IImageData ii):
+	public pointcut createImageData(int foreignRecordId, String parentAlbumName,String imageLabel , byte[] bytes , int endIndex  ):
+	public pointcut postCommand(Command c):
+	public pointcut getMediaName( ) : 
+	public pointcut getAlbumName( ) : 
+	public pointcut showImage( String imageName ):
+	public pointcut editLabel():call(IImageData br.unicamp.ic.sed.mobilemedia.photo.spec.req.IFilesystem.getImageInfo(String))
+	public pointcut updateImage():
+	public pointcut addNewPhotoToAlbum():
+	public pointcut callShowImage():
+	public pointcut deleteImage():
+	public pointcut constructingPhotoViewScreen(br.unicamp.ic.sed.mobilemedia.photo.impl.PhotoViewScreen photoViewScreen):
+	public pointcut getImages(String recordName):
+	public pointcut setCurrentStoreName(String storeName):
+	public pointcut handleCommandException() : 
+	public pointcut showImageListException() : (execution(protected void br.unicamp.ic.sed.mobilemedia.photo.impl.PhotoListController.showImageList(String )));
+	public pointcut initMenu(br.unicamp.ic.sed.mobilemedia.photo.impl.PhotoListScreen photoListScreen):
+	public pointcut addCommand( String command , int commandType , int posi ):
+	pointcut constructPhotoControllerHandler() : 
+	pointcut handleCommand( Command c , PhotoController controller ) :
+	public pointcut getImageInfo() : XPIPhotoViewController.getImageInfo();
+	public pointcut addImageData( String imageName , IImageData imageData, String albumName ):
+	public pointcut exceptionsInGetImage() : execution( protected IImageData br.unicamp.ic.sed.mobilemedia.sorting.aspects.FilesystemMgrSorting.getImage(String, String));
+	public pointcut getImage() : 
+	public pointcut increaseNumberOfViews() : execution( 
+	public pointcut getNumberOfViews() : call( protected int br.unicamp.ic.sed.mobilemedia.sorting.aspects.FilesystemMgrSorting.getNumberOfViews( String, int, int ));
+	public abstract pointcut getBytesFromImageInfo(IImageData ii);
+	public abstract pointcut createImageData(int foreignRecordId, String parentAlbumName,String imageLabel , byte[] bytes , int endIndex  );
+	public abstract pointcut updateCounter(String albumName, String imageName);
+	public abstract pointcut initMenu(javax.microedition.lcdui.List photoListScreen);
+	public abstract pointcut postCommand(Command c);
+	abstract public pointcut setCurrentStoreName(String storeName);
+	public abstract pointcut getImages(String recordName);
+	public pointcut getImageInfo():
+	public pointcut addImageData( String imageName , IImageData imageData, String albumName ):
+	abstract public pointcut showImage(String name);
+	abstract public pointcut postCommand(Command c);
+	abstract public pointcut addCopyCommand(javax.microedition.lcdui.Displayable photoViewScreen);
+	public pointcut handleCommand():
+	public pointcut handleException() : execution(boolean br.unicamp.ic.sed.mobilemedia.copyphoto.impl.PhotoViewController.handleCommand(Command)); 
+	public pointcut initMenu( List photoListScreen ):
+	public pointcut postCommand( Command c ):
+	public pointcut getImages( String recordName ):
+	public pointcut setCurrentStoreName( String storeName ):
+	public pointcut initMenu( List photoListScreen ):
+	public pointcut getImages(String recordName):
+	pointcut getImageName() : XPIPhotoController.getMediaName();
+	public pointcut postCommand(Command c):
+	public pointcut setCurrentStoreName(String storeName):
+	public pointcut initMenu( List photoListScreen ):
+	public pointcut postCommand( Command c , String imageName ):
+	public pointcut getImages( String recordName ):
+	public pointcut setCurrentStoreName( String storeName ):
+	public pointcut postCommand(Command c):
+	public pointcut addCopyCommand(Displayable photoViewScreen):
+	public pointcut showImage(String name):
+	public pointcut postCommand(Command c):XPIPhoto.postCommand(c);
+	public pointcut constructingPhotoViewScreen(Canvas photoViewScreen):
+	public pointcut showImage( String imageName ):XPIPhotoController.showImage( imageName );
+	public pointcut postCommand(Command c):
+	public pointcut constructingPhotoViewScreen(Canvas photoViewScreen):
+	public pointcut showImage(String name):
+	pointcut setCurrentMedia( String media ) : 
+	public pointcut postCommand(Command c):
+	public pointcut addCopyCommand(Displayable photoViewScreen):
+	public pointcut showImage(String name):
+	public pointcut postCommand(Command c):XPIPlayVideoController.postCommand(c);
+	public pointcut setButtons(GameCanvas photoViewScreen):
+	public pointcut playVideo(String albumName , String musicName):
+	public abstract pointcut getBytesFromImageInfo(IImageData ii);
+	public abstract pointcut createImageData(int foreignRecordId, String parentAlbumName,String imageLabel , byte[] bytes , int endIndex  );
+	public abstract pointcut initMenu(javax.microedition.lcdui.List photoListScreen);
+	public abstract pointcut postCommand( Command c , String imageName );
+	public abstract pointcut getImages(String recordName );
+	abstract public pointcut setCurrentStoreName(String storeName);
+	public pointcut getImages() : call(IImageData[] br.unicamp.ic.sed.mobilemedia.favourites.spec.req.IFilesystem.getImages(String))
+	public pointcut updateImageInfo() : call(boolean br.unicamp.ic.sed.mobilemedia.favourites.spec.req.IFilesystem.updateImageInfo(IImageData , IImageData ))
+	public pointcut setButtons( Form display ) : 
+	public pointcut handleCommand( Command c ) : 
+	public abstract pointcut handleCommand( Command c , String recordName , String musicName );
+	public abstract pointcut addCommand( String command , int type , int posi );
+	public pointcut play( String albumName, String musicName ) :
+	public pointcut playMusic() : execution( public void MusicController.playMusic(String,String));
+	pointcut getProvidedInterface( String interfaceName ) : 
+	pointcut getProvidedInterfaces( ) : execution( public String[] Manager.getProvidedInterfaces() );
+	pointcut openConnection() : call( public static Connection javax.microedition.io.Connector.open(String) )
+	pointcut sendMessage() : call( public void MessageConnection.send( Message) )
+	public pointcut exceptionsInSendImage() : openConnection() || sendMessage();
+	public pointcut exceptionsInReceiveImage() : call( public static Connection javax.microedition.io.Connector.open(String) )
+	public pointcut closeConnections() : call( public void javax.microedition.io.Connection.close() )
+	public pointcut getImageInfoToSend(): call(public IImageData IFilesystem.getImageInfo(String));
+	public pointcut receiveImage(byte[] imageByte, int a, int b ) : 
+	public abstract pointcut getImageInfo();
+	public abstract pointcut addImageData( String imageName , IImageData imageData, String albumName );
+	public abstract  pointcut constructingPhotoViewScreen(javax.microedition.lcdui.Canvas photoViewScreen);
+	abstract public pointcut postCommand(Command c);
+	public abstract pointcut showImage(String name);
+	public pointcut loadImage() : 
+	public pointcut addImage() :
+	public pointcut handleException() : XPIAlbumController.handleCommand();
+	public abstract pointcut handleException(  );
+	public abstract pointcut handleException(  );
+	public pointcut handleException() : XPIFilesystemMgrSorting.exceptionsInGetImage()
+	public pointcut handleException() : CopyPhoto_Photo.handleException();
+	public pointcut handleException() : XPICaptureController.addNewMediaToAlbum()
+	public pointcut handleException() : XPIPhotoFavourites.getImages()
+	public pointcut handleException() : XPISenderController.getImageInfoToSend()
+	public pointcut handleException() : XPIFacade.getMedia()
+	public pointcut handleException() : XPIIMusicFacade.playMusic();  
+	public pointcut getAlbumNames(): 
+	public pointcut getImages(): 
+	public pointcut resetImageData(): 
+	public pointcut getBytesFromImageInfo(IImageData ii):
+	public pointcut updateCounter(String albumName, String imageName):
+	public pointcut readImageAsByteArray(String imageFile):
+	public pointcut getImageInfoFromBytes(): 
+	public pointcut getBytesFromImageInfo(): 
+	public pointcut createImageData(int foreignRecordId, String parentAlbumName,String imageLabel , byte[] bytes, int endIndex ):
+	pointcut constructMusicAlbumData() : 
+	pointcut constructIFilesystemFacade() :
+	pointcut constructVideoAlbumData() : 
+	pointcut addImageData() : execution( protected void ImageAccessor.addImageData( String , String , String ))
+	pointcut loadImageDataFromRMS() : execution( protected IImageData[] ImageAccessor.loadImageDataFromRMS(String));
+	pointcut updateImageInfo() : execution( protected boolean updateImageInfo( IImageData , IImageData ));
+	pointcut getImageInfo() : execution( protected IImageData ImageAccessor.getImageInfo( String ));
+	pointcut loadImageBytesFromRMS(): 
+	pointcut deleteSingleImageFromRMS(): 
+	pointcut createNewMediaAlbum(): 
+	pointcut deletePhotoAlbum(): 
+	pointcut readImageByteArray() : execution(public byte[] br.unicamp.ic.sed.mobilemedia.filesystemmgr.impl.ImageUtil.readImageAsByteArray(String));
+	pointcut getMediaInfoFromBytes(): 
+	pointcut getBytesFromImageInfo(): 
+	pointcut getAlbumNames(): 
+	pointcut getImages(): 
+	pointcut resetImageData(): 
+	pointcut getProvidedInterface( String interfaceName ) : 
+	pointcut getProvidedInterfaces( ) : execution( public String[] Manager.getProvidedInterfaces() );
+	public pointcut handleCommand( ) : 
+181
+
+	public pointcut addNewMediaToAlbum() : call( public void IFilesystem.addNewMediaToAlbum(String,String,String,byte[]))
+	public pointcut takePicture() : execution( public byte[] br.unicamp.ic.sed.mobilemedia.captureMedia.impl.CaptureScreen.takePicture());
+	private pointcut handleCommand( Command command ) : execution(public boolean CaptureController.handleCommand( Command ))
+	pointcut initMenu( GameCanvas  screen ) : call( private void CaptureScreen.initMenu( ) )
+	private pointcut handleCommand( Command command ) : execution(public boolean CaptureController.handleCommand( Command ))
+	pointcut getMusicName() : XPIPhotoController.getMediaName();
+	pointcut getAlbumName() : XPIPhotoController.getAlbumName();
+	pointcut postCommand( Command c ) : XPIPhoto.postCommand( c ); 
+	pointcut addCommand( String command , int type , int posi ) : 
+	public pointcut initMenu(br.unicamp.ic.sed.mobilemedia.photo.impl.PhotoListScreen photoListScreen):
+	public pointcut postCommand( Command c ) : 
+	public pointcut addCommandPhoto( Displayable display ) :
+	public pointcut addCommandVideo( Displayable display ) :
+	public pointcut handleCommand( Command c , String recordName , String musicName ):
+	public pointcut addCommand( String command , int type , int posi ):
+	public pointcut handleCommand( Command c , String recordName , String musicName ):
+	public pointcut addCommand( String command , int type , int posi ):
+	public pointcut handleException():
+	public pointcut postCommand(Command c):
+	public pointcut addCopyCommand(Displayable photoViewScreen):
+	public pointcut showImage(String name):
+	public pointcut postCommand(Command c):XPIMusicPlayController.handleCommand(c);
+	public pointcut setButtons(Form photoViewScreen):
+	public pointcut playMusic(String albumName , String musicName):
+	public pointcut postCommand( Command command ) :
+	public pointcut playVideo( String albumName , String videoName ) : 
+	public pointcut getMedia( ) : call( public IImageData IFilesystemVideo.getMediaInfo(String))
+	public pointcut getVideo( ) : call( public InputStream IFilesystemVideo.getVideoFromRecordStore( String , String ))
+	public pointcut setButtons( GameCanvas screen ) :
+	public pointcut createVideoScreen() :
+	public pointcut constructBaseController( MIDlet midlet ) : 
+	public pointcut getBytesFromImageInfo(IImageData ii):
+	public pointcut createImageData(int foreignRecordId, String parentAlbumName,String imageLabel , byte[] bytes , int endIndex  ):
+	public pointcut updateCounter(String albumName, String imageName):
+	public pointcut getBytesFromImageInfo(IImageData ii):
+	public pointcut createImageData(int foreignRecordId, String parentAlbumName,String imageLabel , byte[] bytes , int endIndex  ):
+	public pointcut updateCounter(String albumName, String imageName):
+	public pointcut getBytesFromImageInfo(IImageData ii):
+	public pointcut createImageData(int foreignRecordId, String parentAlbumName,String imageLabel , byte[] bytes , int endIndex  ):
+	public pointcut postCommand(Command c):
+	public pointcut getMediaName( ) : 
+	public pointcut getAlbumName( ) : 
+	public pointcut showImage( String imageName ):
+	public pointcut editLabel():call(IImageData br.unicamp.ic.sed.mobilemedia.photo.spec.req.IFilesystem.getImageInfo(String))
+	public pointcut updateImage():
+	public pointcut addNewPhotoToAlbum():
+	public pointcut callShowImage():
+	public pointcut deleteImage():
+	public pointcut constructingPhotoViewScreen(br.unicamp.ic.sed.mobilemedia.photo.impl.PhotoViewScreen photoViewScreen):
+	public pointcut getImages(String recordName):
+	public pointcut setCurrentStoreName(String storeName):
+	public pointcut handleCommandException() : 
+	public pointcut showImageListException() : (execution(protected void br.unicamp.ic.sed.mobilemedia.photo.impl.PhotoListController.showImageList(String )));
+	public pointcut initMenu(br.unicamp.ic.sed.mobilemedia.photo.impl.PhotoListScreen photoListScreen):
+	public pointcut addCommand( String command , int commandType , int posi ):
+	pointcut constructPhotoControllerHandler() : 
+	pointcut handleCommand( Command c , PhotoController controller ) :
+	public pointcut getImageInfo() : XPIPhotoViewController.getImageInfo();
+	public pointcut addImageData( String imageName , IImageData imageData, String albumName ):
+	public pointcut exceptionsInGetImage() : execution( protected IImageData br.unicamp.ic.sed.mobilemedia.sorting.aspects.FilesystemMgrSorting.getImage(String, String));
+	public pointcut getImage() : 
+	public pointcut increaseNumberOfViews() : execution( 
+	public pointcut getNumberOfViews() : call( protected int br.unicamp.ic.sed.mobilemedia.sorting.aspects.FilesystemMgrSorting.getNumberOfViews( String, int, int ));
+	public pointcut getImageInfo():
+	public pointcut addImageData( String imageName , IImageData imageData, String albumName ):
+	public pointcut handleCommand():
+	public pointcut handleException() : execution(boolean br.unicamp.ic.sed.mobilemedia.copyphoto.impl.PhotoViewController.handleCommand(Command)); 
+	public pointcut initMenu( List photoListScreen ):
+	public pointcut postCommand( Command c ):
+	public pointcut getImages( String recordName ):
+	public pointcut setCurrentStoreName( String storeName ):
+	public pointcut initMenu( List photoListScreen ):
+	public pointcut getImages(String recordName):
+	pointcut getImageName() : XPIPhotoController.getMediaName();
+	public pointcut postCommand(Command c):
+	public pointcut setCurrentStoreName(String storeName):
+	public pointcut initMenu( List photoListScreen ):
+	public pointcut postCommand( Command c , String imageName ):
+	public pointcut getImages( String recordName ):
+	public pointcut setCurrentStoreName( String storeName ):
+	public pointcut postCommand(Command c):
+	public pointcut addCopyCommand(Displayable photoViewScreen):
+	public pointcut showImage(String name):
+	public pointcut postCommand(Command c):XPIPhoto.postCommand(c);
+	public pointcut constructingPhotoViewScreen(Canvas photoViewScreen):
+	public pointcut showImage( String imageName ):XPIPhotoController.showImage( imageName );
+	public pointcut postCommand(Command c):
+	public pointcut constructingPhotoViewScreen(Canvas photoViewScreen):
+	public pointcut showImage(String name):
+	pointcut setCurrentMedia( String media ) : 
+	public pointcut postCommand(Command c):
+	public pointcut addCopyCommand(Displayable photoViewScreen):
+	public pointcut showImage(String name):
+	public pointcut postCommand(Command c):XPIPlayVideoController.postCommand(c);
+	public pointcut setButtons(GameCanvas photoViewScreen):
+	public pointcut playVideo(String albumName , String musicName):
+	public pointcut getImages() : call(IImageData[] br.unicamp.ic.sed.mobilemedia.favourites.spec.req.IFilesystem.getImages(String))
+	public pointcut updateImageInfo() : call(boolean br.unicamp.ic.sed.mobilemedia.favourites.spec.req.IFilesystem.updateImageInfo(IImageData , IImageData ))
+	public pointcut setButtons( Form display ) : 
+	public pointcut handleCommand( Command c ) : 
+	public pointcut play( String albumName, String musicName ) :
+	public pointcut playMusic() : execution( public void MusicController.playMusic(String,String));
+	pointcut getProvidedInterface( String interfaceName ) : 
+	pointcut getProvidedInterfaces( ) : execution( public String[] Manager.getProvidedInterfaces() );
+	pointcut openConnection() : call( public static Connection javax.microedition.io.Connector.open(String) )
+	pointcut sendMessage() : call( public void MessageConnection.send( Message) )
+	public pointcut exceptionsInSendImage() : openConnection() || sendMessage();
+	public pointcut exceptionsInReceiveImage() : call( public static Connection javax.microedition.io.Connector.open(String) )
+	public pointcut closeConnections() : call( public void javax.microedition.io.Connection.close() )
+	public pointcut getImageInfoToSend(): call(public IImageData IFilesystem.getImageInfo(String));
+	public pointcut receiveImage(byte[] imageByte, int a, int b ) : 
+	public pointcut loadImage() : 
+	public pointcut addImage() :
+	public pointcut handleException() : XPIAlbumController.handleCommand();
+	public pointcut handleException() : XPIFilesystemMgrSorting.exceptionsInGetImage()
+	public pointcut handleException() : CopyPhoto_Photo.handleException();
+	public pointcut handleException() : XPICaptureController.addNewMediaToAlbum()
+	public pointcut handleException() : XPIPhotoFavourites.getImages()
+	public pointcut handleException() : XPISenderController.getImageInfoToSend()
+	public pointcut handleException() : XPIFacade.getMedia()
+	public pointcut handleException() : XPIIMusicFacade.playMusic();  
+	public pointcut getAlbumNames(): 
+	public pointcut getImages(): 
+	public pointcut resetImageData(): 
+	public pointcut getBytesFromImageInfo(IImageData ii):
+	public pointcut updateCounter(String albumName, String imageName):
+	public pointcut readImageAsByteArray(String imageFile):
+	public pointcut getImageInfoFromBytes(): 
+	public pointcut getBytesFromImageInfo(): 
+	public pointcut createImageData(int foreignRecordId, String parentAlbumName,String imageLabel , byte[] bytes, int endIndex ):
+	pointcut constructMusicAlbumData() : 
+	pointcut constructIFilesystemFacade() :
+	pointcut constructVideoAlbumData() : 
+	pointcut addImageData() : execution( protected void ImageAccessor.addImageData( String , String , String ))
+	pointcut loadImageDataFromRMS() : execution( protected IImageData[] ImageAccessor.loadImageDataFromRMS(String));
+	pointcut updateImageInfo() : execution( protected boolean updateImageInfo( IImageData , IImageData ));
+	pointcut getImageInfo() : execution( protected IImageData ImageAccessor.getImageInfo( String ));
+	pointcut loadImageBytesFromRMS(): 
+	pointcut deleteSingleImageFromRMS(): 
+	pointcut createNewMediaAlbum(): 
+	pointcut deletePhotoAlbum(): 
+	pointcut readImageByteArray() : execution(public byte[] br.unicamp.ic.sed.mobilemedia.filesystemmgr.impl.ImageUtil.readImageAsByteArray(String));
+	pointcut getMediaInfoFromBytes(): 
+	pointcut getBytesFromImageInfo(): 
+	pointcut getAlbumNames(): 
+	pointcut getImages(): 
+	pointcut resetImageData(): 
+	pointcut getProvidedInterface( String interfaceName ) : 
+	pointcut getProvidedInterfaces( ) : execution( public String[] Manager.getProvidedInterfaces() );
+	public pointcut handleCommand( ) : 
+
+151
