@@ -12,7 +12,7 @@ Please, read the license MITLicense.txt in the $MM-HOME directory.
 INSTALATION
 1) Download a version of MobileMedia SPL 
 1) Install the Wireless Toolkit (WTK) [4]. We have used the version 2.5.2, but we do not whether other versions are also compatible. The WTK depends on a JDK that you have to define. This JDK must be the same used for configuring labBuild.properties configuration file.  
-2) Setup the variables in the labBuild.properties according to your system configuration. Use the ajrt_j2me.jar file instead regular aspectrt.jar.
+2) Setup the variables in the labBuild.properties according to your system configuration. Use the ajrt_j2me.jar file instead of a regular aspectrt.jar.
 3) Update the compile list (in Unix, you can execute in the following way): <$MM-HOME> sh updateMobileMediaCompileList.sh 
 
 EXECUTION
