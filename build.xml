@@ -15,7 +15,8 @@
 
     <property name="ajc.adapter" value="org.aspectj.tools.ant.taskdefs.Ajc11CompilerAdapter"/>
 	
-	<property name="aspectjtools.jar" location="${aspectj.lib.dir}/aspectjtools.jar"/> 
+	<property name="aspectjtools.jar" location="${libs}/aspectjtools-1.5.1.jar"/> 
+	<property name="aspectjrt.jar" location="${libs}/ajrt_j2me.jar"/> 
 	
 	<!-- Define core MIDP libraries -->
 	<!-- MIDP 1.0 CLDC 1.0 -->
@@ -23,13 +24,13 @@
 	<!-- <property name="cldcapi10.jar" location="${wtk.home}\lib\cldcapi10.jar"/>    -->
 
 	<!-- MIDP 2.0 CLDC 1.1 -->
-	<property name="midpapi21.jar" location="${wtk.home}//lib//midpapi21.jar"/>
-	<property name="cldcapi11.jar" location="${wtk.home}//lib//cldcapi11.jar"/>
+	<property name="midpapi21.jar" location="${wtk.home}/lib/midpapi21.jar"/>
+	<property name="cldcapi11.jar" location="${wtk.home}/lib/cldcapi11.jar"/>
 		<!-- <property name="cldcapi11.jar" location="${wtk.home}\lib\cldcapi11.jar"/> -->
 
 	<property name="wma11.jar" location="${wtk.home}/lib/wma11.jar"/>
 	<property name="mmapi.jar" location="${wtk.home}/lib/mmapi.jar"/>
-		
+	
 	
 	<!-- Set the classpath to be used -->
 	<property name="build.classpath" value="${midpapi21.jar};${cldcapi11.jar};${aspectjrt.jar};${antenna.jar};${wma11.jar};${mmapi.jar}"/>

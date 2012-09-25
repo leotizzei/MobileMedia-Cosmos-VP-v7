@@ -1,0 +1,29 @@
+MOBILEMEDIA SOFTWARE PRODUCT LINE (SPL)
+
+
+ABOUT MOBILEMEDIA
+MobileMedia SPL was initially built by AOSD group at Lancaster University (UK) in order to study the evolution of SPLs [1]. MobileMedia SPL is based on a single application called MobilePhoto, developed by Young [2]. Our group at University of Campinas (Brazil) refactored the MobileMedia SPL to create a component-based SPL, with the same features, as described by the work of Tizzei et al. [3]. MobileMedia SPL manipulates photo, music, and video on mobile devices, such as mobile phones. The system uses various technologies based on the Java ME platform, such as SMS, WMA and MMAPI. MobileMedia endured several evolution scenarios, which comprise different types of changes involving mandatory, optional, and alternative features, as well as non-functional concerns. See more in MobileMedia webpage [5].
+
+
+LICENSE
+Please, read the license MITLicense.txt in the $MM-HOME directory.
+
+
+INSTALATION
+1) Download a version of MobileMedia SPL 
+1) Install the Wireless Toolkit (WTK) [4]. We have used the version 2.5.2, but we do not whether other versions are also compatible. The WTK depends on a JDK that you have to define. This JDK must be the same used for configuring labBuild.properties configuration file.  
+2) Setup the variables in the labBuild.properties according to your system configuration. Use the ajrt_j2me.jar file instead regular aspectrt.jar.
+3) Update the compile list (in Unix, you can execute in the following way): <$MM-HOME> sh updateMobileMediaCompileList.sh 
+
+EXECUTION
+1) Build and run the MobileMedia: <$MM-HOME> ant 
+
+
+REFERENCES
+[1] Figueiredo, E.; Cacho, N.; Sant'Anna, C.; Monteiro, M.; Kulesza, U.; Garcia, A.; Soares, S.; Ferrari, F.; Khan, S.; Castor Filho, F. & Dantas, F. Evolving software product lines with aspects: an empirical study on design stability Proceedings of the 30th international conference on Software engineering, ACM, 2008, 261-270
+[2] Trevor Young. Using AspectJ to Build a Software Product Line for Mobile Devices. PhD Thesis
+[3] Tizzei, L.P., Marcelo Dias, Rubira, C.M.F., Alessandro Garcia, Jaejoon Lee. Components meet aspects: assessing design stability of a software product line. Journal of Information and Software Technology, 2011, 53, 121-136 
+[4] Oracle WTK http://www.oracle.com/technetwork/java/index-jsp-137162.html
+[5] http://www.ic.unicamp.br/~tizzei/mobilemedia/
+
+Last update: September, 2012
